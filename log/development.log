@@ -1834,3 +1834,15 @@ Processing by ProductsController#create as HTML
   [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.17ms)
 Completed 201 Created in 47ms (Views: 34.6ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/products" for 108.5.59.237 at 2019-02-06 22:55:37 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xwhu21OUX73BvuziGrG6svv32VtmpyO13A8fTatBZ8fwcSACb1DE/dwaOKCPaJvPlbF6qhrB/ECVYfk2Id75bw==", "product"=>{"name"=>"Television", "price"=>"$800", "description"=>"HD Sony", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Television"], ["description", "HD Sony"], ["inventory", 3], ["price", 0], ["created_at", "2019-02-06 22:55:37.170249"], ["updated_at", "2019-02-06 22:55:37.170249"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+[active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
+[active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (55.99ms)
+Completed 201 Created in 95ms (Views: 82.5ms | ActiveRecord: 4.0ms)
