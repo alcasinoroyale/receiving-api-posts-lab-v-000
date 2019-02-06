@@ -23,7 +23,11 @@ $(function () {
     var posting = $.post('/products', values);
 
     posting.done(function)(data) {
-
+      var product = data;
+      $("#productTitle").text(product["title"]);
+      $("#productDescription").text(product["descrption"]);
+      $("#productInventory").text(product["inventory"]);
+      $("#productPrice").text(product["price"]);
     });
   });
 });
