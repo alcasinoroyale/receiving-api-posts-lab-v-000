@@ -1823,3 +1823,12 @@ Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by ProductsController#new as HTML
   Rendered products/new.html.erb within layouts/application (718.6ms)
 Completed 200 OK in 738ms (Views: 737.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 108.5.59.237 at 2019-02-06 22:54:12 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xwhu21OUX73BvuziGrG6svv32VtmpyO13A8fTatBZ8fwcSACb1DE/dwaOKCPaJvPlbF6qhrB/ECVYfk2Id75bw==", "product"=>{"name"=>"Television", "price"=>"$800", "description"=>"HD Sony", "inventory"=>"3"}, "commit"=>"submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "description", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Television"], ["description", "HD Sony"], ["inventory", 3], ["price", 0], ["created_at", "2019-02-06 22:54:12.283824"], ["updated_at", "2019-02-06 22:54:12.283824"]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
