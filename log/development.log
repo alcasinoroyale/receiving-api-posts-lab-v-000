@@ -1846,3 +1846,7 @@ Processing by ProductsController#create as HTML
 [active_model_serializers]   [1m[36mOrder Load (0.2ms)[0m  [1mSELECT "orders".* FROM "orders" INNER JOIN "ordered_products" ON "orders"."id" = "ordered_products"."order_id" WHERE "ordered_products"."product_id" = ?[0m  [["product_id", 23]]
 [active_model_serializers] Rendered ProductSerializer with ActiveModelSerializers::Adapter::Attributes (55.99ms)
 Completed 201 Created in 95ms (Views: 82.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/products" for 108.5.59.237 at 2019-02-06 22:57:51 +0000
+Cannot render console from 108.5.59.237! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
